@@ -1,24 +1,24 @@
 namespace PrimeFactorKata.Tests {
-	public class PrimeFactorShould {
+	public class PrimeFactorShould
+	{
+		private PrimeFactor primeFactor;
+
 		[SetUp]
 		public void Setup() {
+			primeFactor = new PrimeFactor();
 		}
 
 		[Test]
 		public void Not_have_prime_factors()
 		{
-			var primeFactor = new PrimeFactor();
-
 			var result = primeFactor.Calculate(1);
 			
 			Assert.That(result, Is.EquivalentTo(new List<int>()));
 		}
 
 		[Test]
-		public void return_the_same_number_if_is_prime_number()
+		public void Return_the_same_number_if_is_prime_number()
 		{
-			var primeFactor = new PrimeFactor();
-
 			var result = primeFactor.Calculate(2);
 
 			Assert.That(result, Is.EquivalentTo(new List<int>{2}));
