@@ -16,12 +16,14 @@ namespace PrimeFactorKata.Tests {
 			Assert.That(result, Is.EquivalentTo(new List<int>()));
 		}
 
-		[Test]
-		public void Return_the_same_number_if_is_prime_number()
+		[TestCase(2)]
+		[TestCase(3)]
+		[TestCase(5)]
+		public void Return_the_same_number_if_is_prime_number(int primeNumber)
 		{
-			var result = primeFactor.Calculate(2);
+			var result = primeFactor.Calculate(primeNumber);
 
-			Assert.That(result, Is.EquivalentTo(new List<int>{2}));
+			Assert.That(result, Is.EquivalentTo(new List<int>{primeNumber}));
 		}
 	}
 }
