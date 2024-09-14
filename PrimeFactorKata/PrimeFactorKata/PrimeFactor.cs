@@ -4,20 +4,18 @@ public class PrimeFactor
 {
 	public List<int> Calculate(int numberToDecompose)
 	{
+		var factors = new List<int>();
 		if (numberToDecompose > 1)
 		{
-			if (numberToDecompose == 4)
+			if (numberToDecompose % 2 == 0 && numberToDecompose > 2)
 			{
-				return new List<int> { 2, 2 };
+				factors.Add(2);
+				factors.Add((int)Math.Floor((decimal)numberToDecompose / 2));
+				return factors;
 			}
 
-			if (numberToDecompose == 6)
-			{
-				return new List<int> { 2, 3 };
-			}
-
-			return new List<int> { numberToDecompose };
+			factors.Add(numberToDecompose);
 		}
-		return [];
+		return factors;
 	}
 }
