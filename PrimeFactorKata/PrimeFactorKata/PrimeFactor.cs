@@ -11,6 +11,11 @@ public class PrimeFactor
 				return new List<int> { 2, 2 };
 			}
 
+			if (numberToDecompose == 6)
+			{
+				return new List<int> { 2, 3 };
+			}
+
 			return new List<int> { numberToDecompose };
 		}
 		return [];

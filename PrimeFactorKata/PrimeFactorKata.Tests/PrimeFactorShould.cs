@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 
 namespace PrimeFactorKata.Tests {
@@ -34,6 +35,14 @@ namespace PrimeFactorKata.Tests {
 			var result = Decompose(4);
 
 			Assert.That(result, Is.EquivalentTo(new List<int>{2, 2}));
+		}
+
+		[Test]
+		public void Decompose_6_in_2_for_3()
+		{
+			var result = Decompose(6);
+
+			Assert.That(result, Is.EquivalentTo(new List<int>{2, 3}));
 		}
 
 		private List<int> Decompose(int number)
