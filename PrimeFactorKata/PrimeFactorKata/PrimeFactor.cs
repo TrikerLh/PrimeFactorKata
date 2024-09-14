@@ -10,8 +10,7 @@ public class PrimeFactor
 			if (numberToDecompose % 2 == 0 && numberToDecompose > 2)
 			{
 				factors.Add(2);
-				factors.Add((int)Math.Floor((decimal)numberToDecompose / 2));
-				return factors;
+				numberToDecompose = (int)Math.Floor((decimal)numberToDecompose / 2);
 			}
 
 			factors.Add(numberToDecompose);
