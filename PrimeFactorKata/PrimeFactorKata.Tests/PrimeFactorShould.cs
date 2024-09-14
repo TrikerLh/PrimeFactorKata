@@ -13,7 +13,7 @@ namespace PrimeFactorKata.Tests {
 		[Test]
 		public void Not_have_prime_factors()
 		{
-			var result = primeFactor.Calculate(1);
+			var result = Decompose(1);
 			
 			Assert.That(result, Is.EquivalentTo(new List<int>()));
 		}
@@ -23,7 +23,7 @@ namespace PrimeFactorKata.Tests {
 		[TestCase(5)]
 		public void Cannot_be_decomposed(int primeNumber)
 		{
-			var result = primeFactor.Calculate(primeNumber);
+			var result = Decompose(primeNumber);
 
 			Assert.That(result, Is.EquivalentTo(new List<int>{primeNumber}));
 		}
@@ -31,9 +31,14 @@ namespace PrimeFactorKata.Tests {
 		[Test]
 		public void Decomposed_4_in_2_for_2()
 		{
-			var result = primeFactor.Calculate(4);
+			var result = Decompose(4);
 
 			Assert.That(result, Is.EquivalentTo(new List<int>{2, 2}));
+		}
+
+		private List<int> Decompose(int number)
+		{
+			return primeFactor.Calculate(number);
 		}
 	}
 }
