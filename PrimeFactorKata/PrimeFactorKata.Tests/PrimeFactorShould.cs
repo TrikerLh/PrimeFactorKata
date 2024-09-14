@@ -45,7 +45,6 @@ namespace PrimeFactorKata.Tests {
 			Assert.That(result, Is.EquivalentTo(new List<int>{2, 3}));
 		}
 
-		[Ignore("refactor")]
 		[Test]
 		public void Decompose_8_in_2_for_2_for_2()
 		{

@@ -7,7 +7,7 @@ public class PrimeFactor
 		var factors = new List<int>();
 		if (numberToDecompose > 1)
 		{
-			if (numberToDecompose % 2 == 0 && numberToDecompose > 2)
+			while (numberToDecompose % 2 == 0 && numberToDecompose > 2)
 			{
 				factors.Add(2);
 				numberToDecompose = (int)Math.Floor((decimal)numberToDecompose / 2);
