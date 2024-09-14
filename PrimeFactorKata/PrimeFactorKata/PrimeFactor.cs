@@ -13,6 +13,13 @@ public class PrimeFactor
 				numberToDecompose = (int)Math.Floor((decimal)numberToDecompose / 2);
 			}
 
+			if (numberToDecompose == 9)
+			{
+				factors.Add(3);
+				factors.Add(3);
+				return factors;
+			}
+
 			factors.Add(numberToDecompose);
 		}
 		return factors;

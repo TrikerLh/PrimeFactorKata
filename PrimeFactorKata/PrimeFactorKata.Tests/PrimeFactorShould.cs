@@ -53,6 +53,14 @@ namespace PrimeFactorKata.Tests {
 			Assert.That(result, Is.EquivalentTo(new List<int>{2, 2, 2}));
 		}
 
+		[Test]
+		public void Decompose_9_in_3_for_3()
+		{
+			var result = Decompose(9);
+
+			Assert.That(result, Is.EquivalentTo(new List<int>{3 , 3}));
+		}
+
 		private List<int> Decompose(int number)
 		{
 			return primeFactor.Calculate(number);
